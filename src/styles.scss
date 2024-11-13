@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+// إعدادات الألوان
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-color: #333;
+
+// إعدادات الخطوط
+$font-stack: 'Helvetica Neue', sans-serif;
+
+// إعدادات أنماط الجسم
+body {
+  font-family: $font-stack;
+  color: $font-color;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+// إعداد الأنماط العامة
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// إعداد الأنماط للأزرار
+.button {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}

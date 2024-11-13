@@ -1,0 +1,59 @@
+<h2>قائمة العقارات</h2>
+<button pButton type="button" label="إضافة عقار" (click)="showDialog()"></button>
+
+<table>
+  <thead>
+    <tr>
+      <th>العنوان</th>
+      <th>الوصف</th>
+      <th>السعر</th>
+      <th>النوع</th>
+      <th>الموقع</th>
+      <th>الإجراءات</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let property of properties">
+      <td>{{ property.title }}</td>
+      <td>{{ property.description }}</td>
+      <td>{{ property.price }}</td>
+      <td>{{ property.type }}</td>
+      <td>{{ property.location }}</td>
+      <td>
+        <button>Edit</button>
+        <button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p-dialog header="إضافة عقار" [(visible)]="displayDialog" [modal]="true" [closable]="true">
+  <form (ngSubmit)="onSubmit()">
+    <label for="title">العنوان:</label>
+    <input type="text" [(ngModel)]="newProperty.title" name="title" required>
+
+    <label for="description">الوصف:</label>
+    <textarea [(ngModel)]="newProperty.description" name="description" required></textarea>
+
+    <label for="price">السعر:</label>
+    <input type="number" [(ngModel)]="newProperty.price" name="price" required>
+
+    <label for="type">النوع:</label>
+    <select [(ngModel)]="newProperty.type" name="type" required>
+      <option value="apartment">شقة</option>
+      <option value="house">منزل</option>
+      <option value="land">أرض</option>
+    </select>
+
+    <label for="location">الموقع:</label>
+    <input type="text" [(ngModel)]="newProperty.location" name="location" required>
+
+    <label for="latitude">خط العرض:</label>
+    <input type="number" [(ngModel)]="newProperty.latitude" name="latitude" required>
+
+    <label for="longitude">خط الطول:</label>
+    <input type="number" [(ngModel)]="newProperty.longitude" name="longitude" required>
+
+    <button type="submit" pButton label="إضافة العقار"></button>
+  </form>
+</p-dialog>

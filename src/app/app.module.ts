@@ -12,12 +12,16 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { PropertyListComponent } from './pages/property/property-list/property-list.component';
+import { PropertyCreateComponent } from './pages/property/property-create/property-create.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    PropertyListComponent,
+    PropertyCreateComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -28,7 +32,9 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    DialogModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

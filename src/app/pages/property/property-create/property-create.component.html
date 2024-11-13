@@ -1,0 +1,29 @@
+<h2>إضافة عقار جديد</h2>
+<form (ngSubmit)="onSubmit()">
+  <label for="title">العنوان:</label>
+  <input type="text" [(ngModel)]="property.title" name="title" required>
+
+  <label for="description">الوصف:</label>
+  <textarea [(ngModel)]="property.description" name="description" required></textarea>
+
+  <label for="price">السعر:</label>
+  <input type="number" [(ngModel)]="property.price" name="price" required>
+
+  <label for="type">النوع:</label>
+  <select [(ngModel)]="property.type" name="type" required>
+    <option value="apartment">شقة</option>
+    <option value="house">منزل</option>
+    <option value="land">أرض</option>
+  </select>
+
+  <label for="location">الموقع:</label>
+  <input type="text" [(ngModel)]="property.location" name="location" required>
+
+  <label for="latitude">خط العرض:</label>
+  <input type="number" [(ngModel)]="property.latitude" name="latitude" required>
+
+  <label for="longitude">خط الطول:</label>
+  <input type="number" [(ngModel)]="property.longitude" name="longitude" required>
+
+  <button type="submit">إضافة العقار</button>
+</form>
