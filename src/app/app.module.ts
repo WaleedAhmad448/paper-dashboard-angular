@@ -16,6 +16,8 @@ import { AppRoutes } from './app.routing';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { PropertyListComponent } from './pages/property/property-list/property-list.component';
 import { PropertyCreateComponent } from './pages/property/property-create/property-create.component';
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { PropertyCreateComponent } from './pages/property/property-create/proper
     FixedPluginModule,
     DialogModule,
     ButtonModule,
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
