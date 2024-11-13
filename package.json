@@ -40,9 +40,9 @@
     "moment": "2.29.1",
     "ngx-toastr": "14.3.0",
     "primeng": "^17.18.12",
-    "rxjs": "~7.5.0",
+    "rxjs": "^7.8.1",
     "web-animations-js": "2.3.2",
-    "zone.js": "~0.11.4"
+    "zone.js": "^0.14.10"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.7",
